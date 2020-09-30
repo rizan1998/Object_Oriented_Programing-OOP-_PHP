@@ -1,0 +1,222 @@
+----------pertemuan ke satu------------
+karakteristik object oriented programing
+-menyusun semua kode program dan struktur data sebagai object
+-object adalah unit dasar dari program
+-object menyimpan data dan prilaku
+-object bisa saling berinteraksi
+-java,ruby,python,c++,javascript
+
+kelebihan object oriented programing
+-representasi dunia nyata
+-enkapsulasi dan abtraksi data
+-reusability
+-skalabilitas dan ekstensibilitas
+-kemudahan pengelolaan
+-kolaborasi
+-digunakan oleh framework
+
+procedural programing
+-intruksi dilakukan langkah demi langkah
+-memecah program menjadi bagian-bagian kecil
+-disebut prosedur, subroutine atau fucntion
+-linear/top-to-bottom
+-fortan,algon,cobol,pascal,c,php, jacascript
+
+kelebihan procedural programing
+-to the point
+-simplicity dan kemudahan implementasi
+-mudah diteluri saat error
+-membutuhkan lebih sedikit memory
+
+pembahasan object 
+===>Basic
+-class dan object
+-property dan method
+-contructor
+-object type
+-inheritence
+-visibility/access modifier
+-setter dan getter
+-static method
+
+==>advenced
+-abstract dan interface
+-interceptor
+-object cloning
+-callbacks dan closures
+-namespaces dan autoloading
+
+
+----------pertemuan ke kedua------------
+
+===>class
+-blueprint/template untuk memubat instance dari object
+-class mendefinisikan object
+-menyimpan data dan perilaku yang disebut dengan property dan method
+
+===>membuat class
+-diawali dengan menuliksan keyword class, diikuti nama dibatasi dengan {} untuk
+menyimpan property dan method
+-aturan penamaan class sama sepetri var
+
+==>object
+-intance yang didefinisikan oleh class
+-banyak object dapat dibuat menggunakan satu class
+-object dibuat dengan menggunakan keyword new
+
+----------pertemuan ke kedua------------
+==>property
+-merepsentasikan data/keadaan dari sebuah object
+-Variable yang ada di dalam object (member cariable,
+-sama seperti variable di dalam php, ditambah dengan visibility di depannya
+
+==>method
+-merepsentasikan perilaku dari sebuah object
+-function yang ada di dalam object
+-sama seperti function di dalam php, ditambah dengan visilibilty di depannya
+
+
+----------pertemuan ke ke empat------------
+==>constructor
+constructor adalah sebuah method yang berjalan otomatis saat instance dijalankan
+cosntructor bisa sebagai inisialisasi nilai awalan
+constructor berguna untuk mengisi propery melalui parameter construct yang dikirim
+dari object sehingga property default akan ditimpa oleh object
+
+
+----------type object ke lima------------
+==> tyepe object
+type object disini adalah mebuat subuah class/instance atau object menjadi sebuah type data
+dimana type data ini dapat dipanggil pada seubuah method pada class lainnya
+
+----------inheritence ke enam-------------
+==>inheritence
+adalah sebuah hierarki antar class( parent dan child)
+child class dapat menwarisi semua property dan method dari parent-nya (yang visible)
+child class, memperluas (extends) fungsionalitas dari parent-nya
+
+----------inheritence vidio ke 8-------------
+==>overriding
+menimpa method pada class parent dengan method yang ada di class child
+
+
+----------Visibility vidio ke 9-------------
+==>visibility
+konsep yang digunakan untuk mengatur akses dari property dan method pada sebuah objek
+ada keyword visibility : public, protected, dan private
+
+public : property atau method pada dimana saja, bahkan diluar kelas
+protected : hanya dapat digunakan di dalam sbuha kelas beserta turunannya
+private : hanya dapat digunakan di dalam sebuah kelas tertentu saja
+
+mengapa perlu visibility
+- henya memperlihatkan aspek dari class yang dibutuhkan oleh client(keiika property atau method tidak
+digunakan dimana saja)
+- menentukan kebutuhan yang jelas untuk object
+- memberikan kendali pada kode untuk menhindari bug 
+
+----------setter dan getter vidio ke 9-------------
+==>setter dan getter
+adalah sebuah function yang digunakan sebagai celah mengakses property yang menggunakan visibility
+private dengan membuat kan sebuah method dengan visibility public sehingga dapat diakses oleh turunan
+class, instance dan tidak bisa langsung mengubah pada parent classnya
+
+----------static keyword vidio ke 9-------------
+==>static keyword
+class adalah template object
+static keyword adalah sebuah cara mengakses property atau method tanpa harus instansiasi class 
+
+static keyword digunakan saat
+-member yang terikat dengan class, bukan dengan object
+-nila static akan selalu tetap meskipun object di-instansiasi berulangkali
+-membuat kode menjadi procedural
+-biasanya digunakan untuk membuat fungsi bantuan/helper
+-atau digunakan di class-class utility pada framework
+
+----------constanta vidio ke 9-------------
+==>constanta
+sebuah identifier untuk menyimpan nilai, berbeda dengan var adalah nilai nya tetap dan tidak akan berubah
+dalam php ada 2 cara membuat const yaitu define dan const
+define tidak bisa digunkan didalam class maka dari itu define harus tetap diluar
+const bisa digunkan didalam class atau oop
+
+
+----------abstract class vidio ke 9-------------
+==>abstract class
+adalah class yang tidak dapat di instansiasi (instansiasi class turunannya)
+class abstract dan menjadi class sesungguhnya adalah class turunannya
+mendefinisikan interface untuk kelas lain yang menjadi turunannya
+berperan sebagai kerangka dasar untuk kelas turunannya
+memiliki minimal 1 method abstrak
+digunakan dalam pewarisan/inheretance untuk memaksakan implementasi method
+abstrak yang sama untuk sama kelas turunannya
+
+
+semua kelas turunan, harus mengimplementasikan method abstrak yang ada di kelas abstraknya
+kelas abstrak boleh memiliki property/method reguler
+kelas abstrak boleh memiliki property/ static method
+
+mengapa harus menggunakan konsep class abstract
+-merepresentasikan ide atau konsep dasar
+-composition over inheriance
+-salah satu cara menerapkan polimorphism
+-sentralisasi logic
+-mempermudah pengerjaan tim
+
+----------abstract class implementation vidio ke 9-------------
+==>abstract class implementation 
+
+
+
+----------interface vidio ke 9-------------
+==>interface 
+kelas abtract yang sama sekali tidak memiliki implementasi
+murni menrupakan template untuk kelas turunannya
+tidak boleh memiliki property atau hanya deklarasinya saja methodnya
+semua method harus dideklarasikan dengan visibility public
+boleh mendeklarasikan __construct()
+saru kelas boleh mengimplementasikan banyak interface
+
+dengan menggunakan type-hinting dapat melakukan dependency injection
+pada akhirnyya akan mencapai polymophism
+
+
+----------Autoloading vidio ke 9-------------
+==>Autoloading 
+memanggil class (file) tanpa harus menggunakan require
+1 class ditulis dalam 1 file
+require digunakan untuk aplikasi sederhana
+
+
+----------namespace vidio ke 9-------------
+==>namespace 
+sebuah cara sebuah cara untuk mengelompokkan program kedalam sebuah package tersendiri
+
+mengapa harus di encapsulation
+php tidak mengijinkan kita untuk memiliki 2 class yang sama
+
+enkapsulasi digunakan untuk nama class yang sama jika timnya besar maka akan sangat berguna
+jadi tidak harus mengetahui nama class dari orang lain
+
+usulan penulisan namespace Vendor\namespace\Subnamespace;
+alias digunakan jika namespacenya panjang
+
+use App\Service\User;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
